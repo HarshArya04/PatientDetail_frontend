@@ -11,7 +11,6 @@ export default function Patients() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch patient data
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
@@ -34,7 +33,6 @@ export default function Patients() {
       });
   }, []);
 
-  // Filter patients by search
   useEffect(() => {
     setFiltered(
       patients.filter((p) =>
@@ -43,7 +41,6 @@ export default function Patients() {
     );
   }, [search, patients]);
 
-  // Add new patient
   const handleAddPatient = (patient) => {
     const newPatient = {
       id: Date.now(),

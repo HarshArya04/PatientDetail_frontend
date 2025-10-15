@@ -5,7 +5,6 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 flex justify-between items-center h-16">
-        {/* Logo + Name */}
         <Link to="/" className="flex items-center space-x-2">
           <img src={Logo} alt="Jarurat Care" className="h-10 w-auto" />
           <span className="font-bold text-xl sm:text-2xl text-blue-600">
@@ -13,7 +12,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation Links */}
         <div className="space-x-4 hidden md:flex">
           <Link
             to="/"
@@ -35,10 +33,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Placeholder */}
-        <div className="md:hidden">
-          {/* You can add a hamburger menu here if needed */}
-        </div>
+        <div className="md:hidden"></div>
       </div>
     </nav>
   );
