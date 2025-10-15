@@ -26,8 +26,6 @@ Built using **React**, **Tailwind CSS**, and **JSON Placeholder API** for mock d
 ![Patient Modal](screenshots/modal.png)  
 ![Add Patient Form](screenshots/add_patient.png)  
 
-> Replace these images with your actual screenshots in `screenshots/` folder.
-
 ---
 
 ## **Setup Instructions**
