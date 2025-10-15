@@ -1,26 +1,45 @@
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png";
 
 export default function Navbar() {
   return (
-    <nav className="bg-blue-600 text-white px-4 sm:px-8 lg:px-16 py-3 flex flex-col sm:flex-row sm:justify-between sm:items-center">
-      <h1 className="text-2xl font-bold mb-2 sm:mb-0">Jarurat Care</h1>
-      <ul className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
-        <li>
-          <Link to="/" className="hover:text-gray-200">
+    <nav className="bg-white shadow-md w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 flex justify-between items-center h-16">
+        {/* Logo + Name */}
+        <Link to="/" className="flex items-center space-x-2">
+          <img src={Logo} alt="Jarurat Care" className="h-10 w-auto" />
+          <span className="font-bold text-xl sm:text-2xl text-blue-600">
+            Jarurat Care
+          </span>
+        </Link>
+
+        {/* Navigation Links */}
+        <div className="space-x-4 hidden md:flex">
+          <Link
+            to="/"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
             Home
           </Link>
-        </li>
-        <li>
-          <Link to="/patients" className="hover:text-gray-200">
+          <Link
+            to="/patients"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
             Patients
           </Link>
-        </li>
-        <li>
-          <Link to="/about" className="hover:text-gray-200">
+          <Link
+            to="/about"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
             About
           </Link>
-        </li>
-      </ul>
+        </div>
+
+        {/* Mobile Menu Placeholder */}
+        <div className="md:hidden">
+          {/* You can add a hamburger menu here if needed */}
+        </div>
+      </div>
     </nav>
   );
 }
